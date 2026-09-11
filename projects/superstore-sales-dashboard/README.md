@@ -6,6 +6,10 @@ An entry-level data analysis project that turns a messy retail order table into 
 
 Which regions, categories, and customer segments are driving revenue, and where is profit being lost to discounts?
 
+## Project pitch
+
+This is a compact end-to-end analytics case study: start with an order table, define useful KPIs, investigate category and regional performance, and turn the result into a dashboard that supports a business decision.
+
 ## Tools
 
 - Python (standard library for the reproducible summary)
@@ -38,5 +42,9 @@ The script reads the CSV and regenerates `outputs/insights.md`. No external Pyth
 ## Portfolio takeaway
 
 The finished dashboard should answer a business question in under one minute: where to grow, where to protect margin, and what action to take next.
+
+## Interview preparation
+
+See [`interview-guide.md`](./interview-guide.md) for the 30-second explanation, metric definitions, limitations, and likely follow-up questions.
 
 > Note: this is a portfolio practice dataset created for the project. Replace it later with a larger public dataset or your own data and keep the same analysis workflow.
