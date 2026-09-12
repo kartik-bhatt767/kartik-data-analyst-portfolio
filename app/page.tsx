@@ -20,9 +20,9 @@ const projects = [
   {
     number: '03',
     type: 'Operations analytics · case study',
-    title: 'Plan for the next rush',
-    description: 'An hourly demand analysis that turns bike-sharing patterns into practical capacity-planning signals.',
-    tools: ['Python', 'SQL', 'Next.js'],
+    title: 'Forecast the next bottleneck',
+    description: 'An operations planning case study combining time-series baselines, capacity stress tests, and anomaly detection.',
+    tools: ['Python', 'SQL', 'Forecasting'],
     result: 'Read case study ↗',
     href: '/projects/bike-sharing-operations',
   },
