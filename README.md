@@ -22,6 +22,19 @@ Third-year B.Tech Computer Science Engineering (AI/ML) student based in Lucknow,
 
 Each project includes its own README, analysis script, SQL queries, generated outputs, and interview guide where applicable.
 
+## Visual preview
+
+<table>
+  <tr>
+    <td><img src="./public/portfolio-home.png" alt="Portfolio homepage" width="430"></td>
+    <td><img src="./public/retail-analysis.png" alt="Retail analysis project" width="430"></td>
+  </tr>
+  <tr>
+    <td><img src="./public/customer-churn.png" alt="Customer churn project" width="430"></td>
+    <td><img src="./public/bike-sharing.png" alt="Bike sharing capacity planning project" width="430"></td>
+  </tr>
+</table>
+
 ## Run the portfolio locally
 
 Requirements: Node.js 18+ and Python 3.10+.
