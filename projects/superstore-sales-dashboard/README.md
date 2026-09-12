@@ -1,27 +1,32 @@
-# Retail Sales Performance Dashboard
+# Online Retail Revenue & Returns Analysis
 
-An entry-level data analysis project that turns a messy retail order table into a decision-ready sales and profit dashboard.
+An end-to-end retail analytics case study built around the public [UCI Online Retail dataset](https://archive.ics.uci.edu/dataset/352/online%2Bretail). The project answers a practical question:
 
-## Business question
+> Where is demand coming from, and where is revenue leaking through cancellations?
 
-Which regions, categories, and customer segments are driving revenue, and where is profit being lost to discounts?
+## What the analysis shows
 
-## Project pitch
+- 541,909 raw transaction lines across December 2010 to December 2011
+- 530,104 valid sales lines after data-quality rules
+- £10.67M in valid revenue across 19,960 orders
+- 9,288 cancellation lines that need to be separated from gross demand
+- The source has no cost field, so this project does not invent profit or margin
 
-This is a compact end-to-end analytics case study: start with an order table, define useful KPIs, investigate category and regional performance, and turn the result into a dashboard that supports a business decision.
+## Workflow
+
+1. Read the official Excel workbook without relying on a spreadsheet application.
+2. Treat invoices beginning with `C`, non-positive quantities, and non-positive prices as cancellation/invalid lines.
+3. Calculate revenue as `Quantity × UnitPrice`.
+4. Create transparent market groups from country and product groups from documented description keywords.
+5. Generate a compact summary CSV, a written findings report, and the data used by the interactive dashboard.
+6. Present the result in a filterable Next.js dashboard with market and product-group controls.
 
 ## Tools
 
-- Python (standard library for the reproducible summary)
-- SQL (KPI and drill-down queries)
-- Power BI or Excel (dashboard layer)
-
-## What is included
-
-- `data/sales.csv` — a small practice dataset with 36 retail orders
-- `analysis.py` — calculates KPIs, category/region summaries, discount risk, and monthly trend
-- `sql/kpi_queries.sql` — reusable SQL queries for a dashboard data model
-- `outputs/insights.md` — generated findings and recommended actions
+- Python standard library for reproducible ingestion and cleaning
+- SQL for KPI and drill-down query design
+- TypeScript and Next.js for the interactive dashboard layer
+- CSS/SVG for the dashboard charts
 
 ## Run the analysis
 
@@ -31,20 +36,22 @@ From this project folder:
 python analysis.py
 ```
 
-The script reads the CSV and regenerates `outputs/insights.md`. No external Python packages are required.
+The command runs `scripts/process_uci_retail.py` and regenerates:
 
-## Dashboard pages to build
+- `data/online_retail_summary.csv` — compact dashboard-ready data
+- `outputs/real-insights.md` — findings, limitations, and recommended actions
+- `app/projects/superstore-sales-dashboard/dashboard-data.ts` — typed dashboard data
 
-1. **Executive overview:** sales, profit, margin, orders, and monthly trend
-2. **Performance breakdown:** category, region, and segment comparisons
-3. **Discount watch:** discount bands, profit margin, and orders with negative profit
+The original UCI workbook is not committed because it is large. If `work/online-retail.zip` is not present, the script downloads the official archive. The dataset is attributed to UCI and licensed under CC BY 4.0.
 
-## Portfolio takeaway
+## Important analytical limitation
 
-The finished dashboard should answer a business question in under one minute: where to grow, where to protect margin, and what action to take next.
+This dataset contains quantity and unit price, but not product cost, shipping cost, or a reliable customer segment. The analysis therefore reports revenue, orders, units, average order value, and cancellation rate. Profitability and lifetime-value claims require additional business data.
 
 ## Interview preparation
 
 See [`interview-guide.md`](./interview-guide.md) for the 30-second explanation, metric definitions, limitations, and likely follow-up questions.
 
-> Note: this is a portfolio practice dataset created for the project. Replace it later with a larger public dataset or your own data and keep the same analysis workflow.
+## Dashboard
+
+Open the portfolio locally and select **Retail sales, without the fog**. The project page has the live dashboard and the case-study narrative.

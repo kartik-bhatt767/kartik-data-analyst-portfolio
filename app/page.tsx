@@ -3,26 +3,28 @@ const projects = [
     number: '01',
     type: 'Business intelligence · case study',
     title: 'Retail sales, without the fog',
-    description: 'A practice dashboard that turns retail orders into clear sales, profit, and discount decisions.',
-    tools: ['Python', 'SQL', 'Power BI'],
+    description: 'A real-world retail analysis that turns public transaction data into clear revenue, product-mix, and cancellation decisions.',
+    tools: ['Python', 'SQL', 'Next.js'],
     result: 'Read case study ↗',
     href: '/projects/superstore-sales-dashboard',
   },
   {
     number: '02',
-    type: 'Customer analytics',
-    title: 'Finding the customers worth keeping',
-    description: 'Cohort and retention analysis that surfaces where customers drop off and what brings them back.',
-    tools: ['Python', 'Pandas', 'Tableau'],
-    result: 'Next project',
+    type: 'Customer analytics · case study',
+    title: 'Churn, before cancellation',
+    description: 'An intermediate retention analysis combining cohort segmentation, recurring-charge exposure, and churn-risk scoring.',
+    tools: ['Python', 'SQL', 'BI'],
+    result: 'Read case study ↗',
+    href: '/projects/customer-churn-analysis',
   },
   {
     number: '03',
-    type: 'Operations',
-    title: 'Making the everyday measurable',
-    description: 'A lightweight KPI system for spotting bottlenecks early and giving teams a common operating view.',
-    tools: ['Excel', 'SQL', 'Looker'],
-    result: 'Next project',
+    type: 'Operations analytics · case study',
+    title: 'Plan for the next rush',
+    description: 'An hourly demand analysis that turns bike-sharing patterns into practical capacity-planning signals.',
+    tools: ['Python', 'SQL', 'Next.js'],
+    result: 'Read case study ↗',
+    href: '/projects/bike-sharing-operations',
   },
 ];
 
@@ -84,7 +86,7 @@ export default function Home() {
       <section className="section work-section" id="work">
         <div className="section-heading">
           <div className="section-kicker"><span>01</span><span>Selected work</span></div>
-          <p>The first case study is ready. I’ll add the next projects as I build them, keeping every result grounded in a real question and a clear recommendation.</p>
+          <p>Three case studies are ready. Each starts with a real business question, makes its assumptions visible, and ends with an action someone could explain in an interview.</p>
         </div>
         <div className="project-grid">
           {projects.map((project) => {

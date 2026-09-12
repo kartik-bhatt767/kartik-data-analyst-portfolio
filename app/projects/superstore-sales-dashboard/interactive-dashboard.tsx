@@ -1,98 +1,117 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { salesOrders } from './dashboard-data';
+import { retailGroupSummary, retailMarketSummary, RetailSummary } from './dashboard-data';
 
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const regions = ['All regions', 'Central', 'East', 'South', 'West'];
-const categories = ['All categories', 'Furniture', 'Office Supplies', 'Technology'];
+const months = Array.from(new Set(retailMarketSummary.map((row) => row.month))).sort();
+const markets = ['All markets', ...Array.from(new Set(retailMarketSummary.map((row) => row.market))).sort()];
+const productGroups = ['All product groups', ...Array.from(new Set(retailGroupSummary.map((row) => row.productGroup))).sort()];
 
-const formatMoney = (value: number) => `$${Math.round(value).toLocaleString('en-US')}`;
-const formatMargin = (profit: number, sales: number) => sales ? `${((profit / sales) * 100).toFixed(1)}%` : '0.0%';
+const formatMoney = (value: number) => `£${Math.round(value).toLocaleString('en-GB')}`;
+const formatNumber = (value: number) => Math.round(value).toLocaleString('en-GB');
+const formatMonth = (value: string) => {
+  const [year, month] = value.split('-');
+  return `${new Date(Number(year), Number(month) - 1, 1).toLocaleString('en-US', { month: 'short' })} '${year.slice(2)}`;
+};
+const sum = (rows: RetailSummary[], field: keyof Pick<RetailSummary, 'revenue' | 'orders' | 'customers' | 'units' | 'lines' | 'cancelledOrders' | 'cancelledValue'>) => rows.reduce((total, row) => total + Number(row[field]), 0);
 
 export default function InteractiveDashboard() {
-  const [region, setRegion] = useState('All regions');
-  const [category, setCategory] = useState('All categories');
+  const [market, setMarket] = useState('All markets');
+  const [productGroup, setProductGroup] = useState('All product groups');
 
-  const filteredOrders = useMemo(() => salesOrders.filter((order) => (
-    (region === 'All regions' || order.region === region) &&
-    (category === 'All categories' || order.category === category)
-  )), [region, category]);
+  const filteredRows = useMemo(() => {
+    const source = productGroup === 'All product groups' ? retailMarketSummary : retailGroupSummary;
+    return source.filter((row) => market === 'All markets' || row.market === market).filter((row) => productGroup === 'All product groups' || row.productGroup === productGroup);
+  }, [market, productGroup]);
 
   const summary = useMemo(() => {
-    const sales = filteredOrders.reduce((total, order) => total + order.sales, 0);
-    const profit = filteredOrders.reduce((total, order) => total + order.profit, 0);
-    return { sales, profit, margin: formatMargin(profit, sales), losses: filteredOrders.filter((order) => order.profit < 0).length };
-  }, [filteredOrders]);
+    const revenue = sum(filteredRows, 'revenue');
+    const orders = sum(filteredRows, 'orders');
+    const cancelledOrders = sum(filteredRows, 'cancelledOrders');
+    return {
+      revenue,
+      orders,
+      cancelledOrders,
+      cancelledValue: sum(filteredRows, 'cancelledValue'),
+      units: sum(filteredRows, 'units'),
+      averageOrder: orders ? revenue / orders : 0,
+      cancellationRate: orders + cancelledOrders ? cancelledOrders / (orders + cancelledOrders) : 0,
+    };
+  }, [filteredRows]);
 
-  const monthly = useMemo(() => months.map((month, index) => {
-    const orders = filteredOrders.filter((order) => new Date(order.date).getMonth() === index);
-    return { month, sales: orders.reduce((total, order) => total + order.sales, 0), profit: orders.reduce((total, order) => total + order.profit, 0) };
-  }), [filteredOrders]);
+  const monthly = useMemo(() => months.map((month) => {
+    const rows = filteredRows.filter((row) => row.month === month);
+    return { month, revenue: sum(rows, 'revenue'), orders: sum(rows, 'orders') };
+  }), [filteredRows]);
 
-  const categoryTotals = useMemo(() => ['Furniture', 'Office Supplies', 'Technology'].map((name) => {
-    const orders = filteredOrders.filter((order) => order.category === name);
-    return { name, value: orders.reduce((total, order) => total + order.sales, 0) };
-  }).filter((row) => row.value > 0), [filteredOrders]);
+  const productTotals = useMemo(() => productGroups.slice(1).map((name) => {
+    const rows = retailGroupSummary.filter((row) => row.productGroup === name && (market === 'All markets' || row.market === market));
+    return { name, value: sum(rows, 'revenue') };
+  }).filter((row) => row.value > 0), [market]);
 
-  const regionTotals = useMemo(() => ['Central', 'East', 'South', 'West'].map((name) => {
-    const orders = filteredOrders.filter((order) => order.region === name);
-    return { name, value: orders.reduce((total, order) => total + order.sales, 0) };
-  }).filter((row) => row.value > 0), [filteredOrders]);
+  const marketTotals = useMemo(() => markets.slice(1).map((name) => {
+    const source = productGroup === 'All product groups' ? retailMarketSummary : retailGroupSummary;
+    const rows = source.filter((row) => row.market === name && (productGroup === 'All product groups' || row.productGroup === productGroup));
+    return { name, value: sum(rows, 'revenue') };
+  }).filter((row) => row.value > 0), [productGroup]);
 
-  const maxMonthlySales = Math.max(...monthly.map((row) => row.sales), 1);
-  const maxCategorySales = Math.max(...categoryTotals.map((row) => row.value), 1);
-  const maxRegionSales = Math.max(...regionTotals.map((row) => row.value), 1);
-  const linePoints = monthly.map((row, index) => `${38 + index * 61},${186 - (row.sales / maxMonthlySales) * 145}`).join(' ');
-  const topCategory = [...categoryTotals].sort((a, b) => b.value - a.value)[0];
-  const topRegion = [...regionTotals].sort((a, b) => b.value - a.value)[0];
+  const maxMonthlyRevenue = Math.max(...monthly.map((row) => row.revenue), 1);
+  const maxProductRevenue = Math.max(...productTotals.map((row) => row.value), 1);
+  const maxMarketRevenue = Math.max(...marketTotals.map((row) => row.value), 1);
+  const chartWidth = 692;
+  const pointX = (index: number) => 38 + (index * chartWidth) / Math.max(monthly.length - 1, 1);
+  const pointY = (value: number) => 186 - (value / maxMonthlyRevenue) * 145;
+  const linePoints = monthly.map((row, index) => `${pointX(index)},${pointY(row.revenue)}`).join(' ');
+  const topProduct = [...productTotals].sort((a, b) => b.value - a.value)[0];
+  const topMarket = [...marketTotals].sort((a, b) => b.value - a.value)[0];
+  const currentProductName = productGroup === 'All product groups' ? topProduct?.name : productGroup;
 
   return (
     <section className="dashboard-live" aria-labelledby="dashboard-title">
       <div className="dashboard-heading">
         <div>
           <div className="project-section-label">Live dashboard</div>
-          <h2 id="dashboard-title">Explore the sales story.</h2>
-          <p>Change the filters to see how the business story shifts by region and category.</p>
+          <h2 id="dashboard-title">Explore the retail signal.</h2>
+          <p>Filter the public UCI Online Retail dataset to see where revenue comes from and where cancellations need attention.</p>
         </div>
         <div className="dashboard-controls" aria-label="Dashboard filters">
-          <label><span>Region</span><select value={region} onChange={(event) => setRegion(event.target.value)}>{regions.map((item) => <option key={item}>{item}</option>)}</select></label>
-          <label><span>Category</span><select value={category} onChange={(event) => setCategory(event.target.value)}>{categories.map((item) => <option key={item}>{item}</option>)}</select></label>
+          <label><span>Market</span><select value={market} onChange={(event) => setMarket(event.target.value)}>{markets.map((item) => <option key={item}>{item}</option>)}</select></label>
+          <label><span>Product group</span><select value={productGroup} onChange={(event) => setProductGroup(event.target.value)}>{productGroups.map((item) => <option key={item}>{item}</option>)}</select></label>
         </div>
       </div>
 
       <div className="dashboard-kpis" aria-live="polite">
-        <div><span>Sales</span><strong>{formatMoney(summary.sales)}</strong></div>
-        <div><span>Profit</span><strong>{formatMoney(summary.profit)}</strong></div>
-        <div><span>Margin</span><strong>{summary.margin}</strong></div>
-        <div><span>Loss orders</span><strong>{summary.losses}</strong></div>
+        <div><span>Valid revenue</span><strong>{formatMoney(summary.revenue)}</strong></div>
+        <div><span>Orders</span><strong>{formatNumber(summary.orders)}</strong></div>
+        <div><span>Average order</span><strong>{formatMoney(summary.averageOrder)}</strong></div>
+        <div><span>Cancellation rate</span><strong>{(summary.cancellationRate * 100).toFixed(1)}%</strong></div>
       </div>
 
       <div className="dashboard-chart-grid">
         <div className="dashboard-panel dashboard-trend-panel">
-          <div className="dashboard-panel-heading"><div><span>Monthly trend</span><h3>Sales over time</h3></div><strong>{filteredOrders.length} orders</strong></div>
-          <svg className="dashboard-line-chart" viewBox="0 0 760 235" role="img" aria-label="Monthly sales trend line chart">
-            <title>Monthly sales trend</title>
+          <div className="dashboard-panel-heading"><div><span>Monthly trend</span><h3>Revenue over time</h3></div><strong>{formatNumber(summary.units)} units</strong></div>
+          <svg className="dashboard-line-chart" viewBox="0 0 760 235" role="img" aria-label="Monthly revenue trend line chart">
+            <title>Monthly revenue trend</title>
             {[40, 88, 136, 184].map((y) => <line key={y} x1="38" y1={y} x2="728" y2={y} className="dashboard-grid-line" />)}
             <polyline points={linePoints} className="dashboard-sales-line" />
-            {monthly.map((row, index) => <circle key={row.month} cx={38 + index * 61} cy={186 - (row.sales / maxMonthlySales) * 145} r="4" className="dashboard-sales-point"><title>{`${row.month}: ${formatMoney(row.sales)}`}</title></circle>)}
-            {monthly.map((row, index) => <text key={row.month} x={38 + index * 61} y="216" textAnchor="middle" className="dashboard-axis-label">{row.month}</text>)}
+            {monthly.map((row, index) => <circle key={row.month} cx={pointX(index)} cy={pointY(row.revenue)} r="4" className="dashboard-sales-point"><title>{`${formatMonth(row.month)}: ${formatMoney(row.revenue)}`}</title></circle>)}
+            {monthly.map((row, index) => <text key={row.month} x={pointX(index)} y="216" textAnchor="middle" className="dashboard-axis-label">{formatMonth(row.month)}</text>)}
           </svg>
-          <div className="dashboard-legend"><span><i className="legend-dot" />Sales</span><span>Peak: {formatMoney(Math.max(...monthly.map((row) => row.sales)))}</span></div>
+          <div className="dashboard-legend"><span><i className="legend-dot" />Revenue</span><span>Peak: {formatMoney(Math.max(...monthly.map((row) => row.revenue)))}</span></div>
         </div>
 
         <div className="dashboard-panel">
-          <div className="dashboard-panel-heading"><div><span>Category mix</span><h3>Where sales come from</h3></div></div>
-          <div className="dashboard-bars">{categoryTotals.map((row) => <div className="dashboard-bar-row" key={row.name}><div className="dashboard-bar-label"><span>{row.name}</span><strong>{formatMoney(row.value)}</strong></div><div className="dashboard-bar-track"><div className="dashboard-bar-fill" style={{ width: `${(row.value / maxCategorySales) * 100}%` }} /></div></div>)}</div>
+          <div className="dashboard-panel-heading"><div><span>Product mix</span><h3>Where revenue comes from</h3></div></div>
+          <div className="dashboard-bars">{productTotals.map((row) => <div className="dashboard-bar-row" key={row.name}><div className="dashboard-bar-label"><span>{row.name}</span><strong>{formatMoney(row.value)}</strong></div><div className="dashboard-bar-track"><div className="dashboard-bar-fill" style={{ width: `${(row.value / maxProductRevenue) * 100}%` }} /></div></div>)}</div>
         </div>
       </div>
 
       <div className="dashboard-bottom-grid">
         <div className="dashboard-panel">
-          <div className="dashboard-panel-heading"><div><span>Regional view</span><h3>Sales by region</h3></div></div>
-          <div className="dashboard-bars">{regionTotals.map((row) => <div className="dashboard-bar-row" key={row.name}><div className="dashboard-bar-label"><span>{row.name}</span><strong>{formatMoney(row.value)}</strong></div><div className="dashboard-bar-track"><div className="dashboard-bar-fill dashboard-bar-fill-alt" style={{ width: `${(row.value / maxRegionSales) * 100}%` }} /></div></div>)}</div>
+          <div className="dashboard-panel-heading"><div><span>Market view</span><h3>Revenue by market</h3></div></div>
+          <div className="dashboard-bars">{marketTotals.map((row) => <div className="dashboard-bar-row" key={row.name}><div className="dashboard-bar-label"><span>{row.name}</span><strong>{formatMoney(row.value)}</strong></div><div className="dashboard-bar-track"><div className="dashboard-bar-fill dashboard-bar-fill-alt" style={{ width: `${(row.value / maxMarketRevenue) * 100}%` }} /></div></div>)}</div>
         </div>
-        <div className="dashboard-insight" aria-live="polite"><span>Current read</span><h3>{topCategory?.name || 'No category'} leads the filtered view.</h3><p>{topRegion?.name || 'No region'} is the largest region in this selection, while the filtered margin is {summary.margin}. Use this view to ask what action should follow the number.</p></div>
+        <div className="dashboard-insight" aria-live="polite"><span>Current read</span><h3>{currentProductName || 'No product group'} leads this view.</h3><p>{topMarket?.name || 'No market'} is the largest market in this selection. The cancellation rate is {(summary.cancellationRate * 100).toFixed(1)}%, representing {formatMoney(summary.cancelledValue)} in cancelled line value to investigate.</p></div>
       </div>
     </section>
   );

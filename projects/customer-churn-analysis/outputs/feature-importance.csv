@@ -1,0 +1,47 @@
+feature,weight,direction
+tenure,-0.33543,negative
+MonthlyCharges,0.21891,positive
+TotalCharges,-0.18088,negative
+PaperlessBilling=No,-0.17326,negative
+Contract=Two year,-0.16641,negative
+PhoneService=Yes,-0.15584,negative
+InternetService=DSL,-0.15092,negative
+Partner=Yes,-0.14943,negative
+SeniorCitizen,0.1407,positive
+TechSupport=Yes,-0.13903,negative
+OnlineSecurity=Yes,-0.13704,negative
+Dependents=Yes,-0.1253,negative
+InternetService=No,-0.12522,negative
+OnlineSecurity=No internet service,-0.12522,negative
+OnlineBackup=No internet service,-0.12522,negative
+DeviceProtection=No internet service,-0.12522,negative
+TechSupport=No internet service,-0.12522,negative
+StreamingTV=No internet service,-0.12522,negative
+StreamingMovies=No internet service,-0.12522,negative
+Contract=One year,-0.12034,negative
+MultipleLines=No,-0.11184,negative
+OnlineBackup=Yes,-0.10359,negative
+PaymentMethod=Credit card (automatic),-0.1022,negative
+gender=Male,-0.1005,negative
+Contract=Month-to-month,0.10032,positive
+PaymentMethod=Electronic check,0.09781,positive
+PaymentMethod=Bank transfer (automatic),-0.09418,negative
+InternetService=Fiber optic,0.08972,positive
+PaymentMethod=Mailed check,-0.08786,negative
+DeviceProtection=Yes,-0.08781,negative
+gender=Female,-0.08592,negative
+TechSupport=No,0.07782,positive
+OnlineSecurity=No,0.07584,positive
+Dependents=No,-0.06112,negative
+MultipleLines=Yes,-0.04399,negative
+OnlineBackup=No,0.04239,positive
+Partner=No,-0.037,negative
+StreamingMovies=No,-0.03534,negative
+StreamingTV=No,-0.03114,negative
+PhoneService=No,-0.03059,negative
+MultipleLines=No phone service,-0.03059,negative
+StreamingTV=Yes,-0.03007,negative
+DeviceProtection=No,0.02661,positive
+StreamingMovies=Yes,-0.02586,negative
+PaperlessBilling=Yes,-0.01316,negative
+service_count,-0.00313,negative

@@ -1,0 +1,17 @@
+{
+  "trainRecords": 4930,
+  "validationRecords": 704,
+  "testRecords": 1409,
+  "featureCount": 46,
+  "baselineRate": 0.23846699787083037,
+  "threshold": 0.35,
+  "accuracy": 0.7665010645848119,
+  "precision": 0.5073684210526316,
+  "recall": 0.7172619047619048,
+  "f1": 0.5943279901356351,
+  "rocAuc": 0.8197033240136689,
+  "truePositive": 241,
+  "trueNegative": 839,
+  "falsePositive": 234,
+  "falseNegative": 95
+}

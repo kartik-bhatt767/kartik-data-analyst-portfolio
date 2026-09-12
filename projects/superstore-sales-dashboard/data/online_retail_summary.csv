@@ -1,0 +1,346 @@
+level,month,market,product_group,revenue,orders,customers,units,lines,cancelled_orders,cancelled_value
+market,2010-12,APAC,,8943.66,7,5,4614,98,2,255.19
+market,2010-12,Europe,,56500.24,88,62,34695,1785,22,2004.26
+market,2010-12,Other,,10033.26,17,3,5770,373,6,1003.31
+market,2010-12,UK,,748268.98,1447,815,314160,39224,445,71526.36
+market,2011-01,APAC,,15584.26,13,9,8342,299,2,315.54
+market,2011-01,Europe,,92586.13,95,83,54932,2670,30,3819.41
+market,2011-01,Other,,21904.19,7,2,8794,173,2,247.67
+market,2011-01,UK,,561289.98,971,647,315717,31164,361,126981.68
+market,2011-02,APAC,,22290.49,10,9,12541,229,1,67.95
+market,2011-02,Europe,,59064.71,82,69,34741,1594,26,1146.65
+market,2011-02,Other,,12248.74,13,2,6004,432,2,2574.6
+market,2011-02,UK,,430027.95,995,679,230269,24850,266,21780.04
+market,2011-03,APAC,,19856.65,7,6,10461,125,7,2889.77
+market,2011-03,Americas,,140.54,1,1,88,10,0,0.0
+market,2011-03,Europe,,89214.38,115,84,52405,2498,23,1545.34
+market,2011-03,Other,,22197.51,23,3,9580,558,5,3414.28
+market,2011-03,UK,,586230.28,1308,880,304992,32612,499,26522.89
+market,2011-04,APAC,,17179.32,9,5,10434,159,6,8205.71
+market,2011-04,Americas,,1527.55,2,2,493,54,0,0.0
+market,2011-04,Europe,,34522.99,69,61,17158,1269,24,2132.07
+market,2011-04,Other,,8061.0,13,4,4451,333,0,0.0
+market,2011-04,UK,,476517.76,1153,784,276279,27281,471,34263.72
+market,2011-05,APAC,,17504.42,8,5,11264,238,2,9.9
+market,2011-05,Americas,,534.24,1,1,504,1,0,0.0
+market,2011-05,Europe,,94118.37,125,84,53366,2400,25,4250.7
+market,2011-05,Other,,19064.63,24,4,8831,667,5,87.41
+market,2011-05,UK,,639314.36,1523,962,321773,32858,453,42854.5
+market,2011-06,APAC,,27428.77,6,3,18774,191,1,23.0
+market,2011-06,Americas,,1171.46,1,1,1092,57,0,0.0
+market,2011-06,Europe,,88147.56,112,94,51133,2688,22,749.6
+market,2011-06,Other,,25481.44,31,4,13113,653,9,4811.86
+market,2011-06,UK,,619510.67,1383,889,305101,32388,448,65032.32
+market,2011-07,APAC,,14198.85,11,7,10439,300,2,196.81
+market,2011-07,Americas,,1768.58,2,1,1027,78,0,0.0
+market,2011-07,Europe,,56366.86,93,76,32384,2107,20,1160.07
+market,2011-07,Other,,44892.06,32,6,23499,958,5,49.2
+market,2011-07,UK,,601994.84,1337,859,334410,35202,428,36515.0
+market,2011-08,APAC,,30176.96,5,3,16334,327,1,49.79
+market,2011-08,Americas,,51.56,1,1,52,5,0,0.0
+market,2011-08,Europe,,101977.6,124,93,62364,3005,30,1294.82
+market,2011-08,Other,,18884.78,21,4,10262,675,10,6196.28
+market,2011-08,UK,,608047.48,1210,834,332758,30471,338,68916.98
+market,2011-09,APAC,,9309.53,13,8,4943,172,2,2728.95
+market,2011-09,Europe,,108830.77,140,110,63493,3175,30,667.78
+market,2011-09,Other,,43373.4,39,2,23344,1247,13,447.5
+market,2011-09,UK,,897076.47,1645,1146,479040,44667,447,35058.32
+market,2011-10,APAC,,27038.44,12,6,9607,232,2,6079.01
+market,2011-10,Americas,,2311.2,2,2,1717,125,1,1579.51
+market,2011-10,Europe,,161334.42,183,124,90189,4682,38,14068.99
+market,2011-10,Other,,25320.23,32,3,16255,928,7,1010.3
+market,2011-10,UK,,938975.01,1811,1230,505633,53337,552,61536.82
+market,2011-11,APAC,,16028.9,9,5,8349,74,5,762.83
+market,2011-11,Europe,,136417.04,226,152,73868,4697,59,4111.44
+market,2011-11,Other,,31704.18,44,2,17298,1123,11,325.38
+market,2011-11,UK,,1325346.21,2490,1505,654992,77475,630,42540.43
+market,2011-12,APAC,,0.0,0,0,0,0,1,116.93
+market,2011-12,Americas,,885.24,2,2,604,32,1,269.96
+market,2011-12,Europe,,37944.46,61,52,22256,1152,16,833.27
+market,2011-12,Other,,7340.89,10,1,4122,333,2,17.85
+market,2011-12,UK,,592622.09,746,560,287266,23594,177,203886.66
+group,2010-12,APAC,Accessories & decor,330.15,3,2,167,9,0,0.0
+group,2010-12,APAC,Gifts & seasonal,1336.3,4,3,1098,28,1,11.55
+group,2010-12,APAC,Home & living,5188.08,6,4,2134,22,2,233.69
+group,2010-12,APAC,Other products,1598.33,5,4,839,30,1,9.95
+group,2010-12,APAC,Stationery,490.8,2,2,376,9,0,0.0
+group,2010-12,Europe,Accessories & decor,3355.47,48,40,2755,123,3,24.7
+group,2010-12,Europe,Gifts & seasonal,6741.31,61,49,5109,243,6,52.75
+group,2010-12,Europe,Home & living,15466.89,68,52,7148,512,11,167.4
+group,2010-12,Europe,Other products,28959.24,81,59,17831,825,15,1759.41
+group,2010-12,Europe,Stationery,1977.33,34,28,1852,82,0,0.0
+group,2010-12,Other,Accessories & decor,727.98,12,2,279,32,2,44.25
+group,2010-12,Other,Gifts & seasonal,1246.6,11,1,1018,52,3,354.96
+group,2010-12,Other,Home & living,2965.88,15,2,1100,103,3,268.9
+group,2010-12,Other,Other products,4731.56,15,3,3129,169,3,267.7
+group,2010-12,Other,Stationery,361.24,8,2,244,17,1,67.5
+group,2010-12,UK,Accessories & decor,73003.41,856,554,35050,4610,48,933.11
+group,2010-12,UK,Gifts & seasonal,103498.47,876,582,57181,6284,49,2553.48
+group,2010-12,UK,Home & living,224258.64,1161,731,84008,11150,133,5727.05
+group,2010-12,UK,Other products,326611.5,1292,769,121571,14981,196,62094.19
+group,2010-12,UK,Stationery,20896.96,543,378,16350,2199,141,218.53
+group,2011-01,APAC,Accessories & decor,3630.53,7,5,1115,46,0,0.0
+group,2011-01,APAC,Gifts & seasonal,1730.64,8,7,1075,45,1,2.1
+group,2011-01,APAC,Home & living,4820.94,10,7,3114,86,2,207.69
+group,2011-01,APAC,Other products,4993.47,9,7,2874,106,1,3.75
+group,2011-01,APAC,Stationery,408.68,8,6,164,16,1,102.0
+group,2011-01,Europe,Accessories & decor,6883.38,68,60,2985,231,4,47.85
+group,2011-01,Europe,Gifts & seasonal,10376.11,70,62,8468,392,2,9.17
+group,2011-01,Europe,Home & living,25800.65,82,72,13490,774,15,274.8
+group,2011-01,Europe,Other products,45287.32,94,83,26546,1104,21,3472.09
+group,2011-01,Europe,Stationery,4238.67,58,55,3443,169,2,15.5
+group,2011-01,Other,Accessories & decor,3593.41,7,2,1160,28,1,29.8
+group,2011-01,Other,Gifts & seasonal,2062.6,4,2,1515,28,1,35.04
+group,2011-01,Other,Home & living,6521.6,7,2,2627,48,1,72.05
+group,2011-01,Other,Other products,8158.48,7,2,2734,58,2,110.78
+group,2011-01,Other,Stationery,1568.1,4,2,758,11,0,0.0
+group,2011-01,UK,Accessories & decor,53793.29,648,473,28808,3863,41,1826.12
+group,2011-01,UK,Gifts & seasonal,59987.84,587,412,38985,4427,41,1338.54
+group,2011-01,UK,Home & living,215435.59,821,585,138626,8459,123,81095.55
+group,2011-01,UK,Other products,213768.06,897,613,94372,12734,146,42097.04
+group,2011-01,UK,Stationery,18305.2,461,329,14926,1681,128,624.43
+group,2011-02,APAC,Accessories & decor,2847.05,7,7,1409,37,0,0.0
+group,2011-02,APAC,Gifts & seasonal,2651.07,5,5,2193,30,0,0.0
+group,2011-02,APAC,Home & living,7337.1,8,8,3958,63,0,0.0
+group,2011-02,APAC,Other products,7384.25,9,8,3387,78,1,14.85
+group,2011-02,APAC,Stationery,2071.02,7,6,1594,21,1,53.1
+group,2011-02,Europe,Accessories & decor,3886.89,45,42,2075,114,3,40.05
+group,2011-02,Europe,Gifts & seasonal,7358.81,52,45,6224,220,1,25.5
+group,2011-02,Europe,Home & living,17277.81,71,61,9755,479,16,227.18
+group,2011-02,Europe,Other products,26655.86,80,68,13513,690,20,847.57
+group,2011-02,Europe,Stationery,3885.34,43,39,3174,91,2,6.35
+group,2011-02,Other,Accessories & decor,1258.86,10,2,1290,72,0,0.0
+group,2011-02,Other,Gifts & seasonal,825.56,6,2,437,48,0,0.0
+group,2011-02,Other,Home & living,4058.44,12,2,1900,119,2,937.65
+group,2011-02,Other,Other products,5524.11,13,2,2092,171,2,1636.95
+group,2011-02,Other,Stationery,581.77,6,2,285,22,0,0.0
+group,2011-02,UK,Accessories & decor,58707.5,656,479,31751,3218,25,296.5
+group,2011-02,UK,Gifts & seasonal,56398.06,616,452,37307,3500,28,493.26
+group,2011-02,UK,Home & living,103568.26,815,598,50444,6463,81,2240.07
+group,2011-02,UK,Other products,191894.09,903,639,96704,10291,133,18607.91
+group,2011-02,UK,Stationery,19460.04,458,335,14063,1378,74,142.3
+group,2011-03,APAC,Accessories & decor,475.95,3,3,111,9,0,0.0
+group,2011-03,APAC,Gifts & seasonal,746.38,3,3,1425,18,1,2.89
+group,2011-03,APAC,Home & living,4354.81,5,5,3115,32,2,183.45
+group,2011-03,APAC,Other products,13645.59,6,5,5306,56,5,2672.83
+group,2011-03,APAC,Stationery,633.92,4,4,504,10,1,30.6
+group,2011-03,Americas,Home & living,76.4,1,1,50,5,0,0.0
+group,2011-03,Americas,Other products,64.14,1,1,38,5,0,0.0
+group,2011-03,Europe,Accessories & decor,5182.53,65,56,3060,187,7,76.4
+group,2011-03,Europe,Gifts & seasonal,15563.96,77,64,9934,398,1,1.65
+group,2011-03,Europe,Home & living,23873.9,99,78,12395,693,13,197.12
+group,2011-03,Europe,Other products,39220.86,109,83,22671,1065,17,1270.17
+group,2011-03,Europe,Stationery,5373.13,58,51,4345,155,0,0.0
+group,2011-03,Other,Accessories & decor,1841.9,17,3,1117,54,2,15.15
+group,2011-03,Other,Gifts & seasonal,3097.21,17,3,884,72,0,0.0
+group,2011-03,Other,Home & living,5117.69,20,3,2277,142,2,7.84
+group,2011-03,Other,Other products,11660.59,22,3,4714,268,3,3391.29
+group,2011-03,Other,Stationery,480.12,8,3,588,22,0,0.0
+group,2011-03,UK,Accessories & decor,78613.97,882,656,37669,4264,51,1001.33
+group,2011-03,UK,Gifts & seasonal,94027.02,806,570,57817,4941,38,1076.81
+group,2011-03,UK,Home & living,140294.63,1068,767,67644,8259,123,2063.68
+group,2011-03,UK,Other products,243174.95,1186,828,120489,13283,236,22120.94
+group,2011-03,UK,Stationery,30119.71,616,455,21373,1865,179,260.13
+group,2011-04,APAC,Accessories & decor,1226.01,5,4,1159,18,1,425.0
+group,2011-04,APAC,Gifts & seasonal,1033.82,3,3,908,24,1,0.72
+group,2011-04,APAC,Home & living,1875.06,4,2,1076,34,2,1637.15
+group,2011-04,APAC,Other products,12638.23,9,5,7087,78,4,6142.84
+group,2011-04,APAC,Stationery,406.2,2,1,204,5,0,0.0
+group,2011-04,Americas,Accessories & decor,212.11,2,2,65,7,0,0.0
+group,2011-04,Americas,Gifts & seasonal,87.55,2,2,29,4,0,0.0
+group,2011-04,Americas,Home & living,457.59,2,2,195,14,0,0.0
+group,2011-04,Americas,Other products,698.75,2,2,185,26,0,0.0
+group,2011-04,Americas,Stationery,71.55,2,2,19,3,0,0.0
+group,2011-04,Europe,Accessories & decor,1494.43,39,39,816,80,2,13.6
+group,2011-04,Europe,Gifts & seasonal,5864.4,52,48,3737,219,3,186.68
+group,2011-04,Europe,Home & living,7661.85,51,48,4236,321,10,132.14
+group,2011-04,Europe,Other products,17987.37,67,61,7119,579,18,1799.65
+group,2011-04,Europe,Stationery,1514.94,34,34,1250,70,0,0.0
+group,2011-04,Other,Accessories & decor,1830.47,11,3,986,37,0,0.0
+group,2011-04,Other,Gifts & seasonal,961.56,9,2,566,52,0,0.0
+group,2011-04,Other,Home & living,1625.08,12,4,782,66,0,0.0
+group,2011-04,Other,Other products,3307.47,13,4,1943,160,0,0.0
+group,2011-04,Other,Stationery,336.42,8,3,174,18,0,0.0
+group,2011-04,UK,Accessories & decor,64139.09,770,598,37550,3307,39,7969.59
+group,2011-04,UK,Gifts & seasonal,62679.76,700,522,43838,4360,27,791.03
+group,2011-04,UK,Home & living,125897.98,942,692,66818,7192,99,7209.83
+group,2011-04,UK,Other products,193803.49,1022,740,107913,10776,165,17897.75
+group,2011-04,UK,Stationery,29997.44,558,435,20160,1646,237,395.52
+group,2011-05,APAC,Accessories & decor,2281.77,4,3,1339,25,0,0.0
+group,2011-05,APAC,Gifts & seasonal,1404.95,6,3,795,28,1,9.9
+group,2011-05,APAC,Home & living,4501.28,6,4,2724,69,0,0.0
+group,2011-05,APAC,Other products,8291.62,8,5,5662,105,1,0.0
+group,2011-05,APAC,Stationery,1024.8,3,2,744,11,0,0.0
+group,2011-05,Americas,Home & living,534.24,1,1,504,1,0,0.0
+group,2011-05,Europe,Accessories & decor,5896.31,67,58,3480,195,3,15.7
+group,2011-05,Europe,Gifts & seasonal,17156.58,82,63,12332,488,2,8.32
+group,2011-05,Europe,Home & living,23547.78,96,73,12302,590,7,85.85
+group,2011-05,Europe,Other products,43515.51,119,84,22190,982,21,4140.83
+group,2011-05,Europe,Stationery,4002.19,57,49,3062,145,0,0.0
+group,2011-05,Other,Accessories & decor,2942.57,20,4,1715,86,2,12.5
+group,2011-05,Other,Gifts & seasonal,1123.85,17,4,852,69,0,0.0
+group,2011-05,Other,Home & living,3839.15,21,4,1900,166,1,20.3
+group,2011-05,Other,Other products,10265.86,24,4,3832,308,3,54.61
+group,2011-05,Other,Stationery,893.2,18,4,532,38,0,0.0
+group,2011-05,UK,Accessories & decor,85784.15,980,698,36798,4062,46,1223.54
+group,2011-05,UK,Gifts & seasonal,96346.44,874,619,60635,5723,37,1061.77
+group,2011-05,UK,Home & living,175209.64,1238,849,87818,8680,133,2886.97
+group,2011-05,UK,Other products,253058.92,1351,914,114533,12657,203,37410.52
+group,2011-05,UK,Stationery,28915.21,655,471,21989,1736,154,271.7
+group,2011-06,APAC,Accessories & decor,2355.51,6,3,1413,16,0,0.0
+group,2011-06,APAC,Gifts & seasonal,2848.52,3,2,2244,29,0,0.0
+group,2011-06,APAC,Home & living,4997.52,3,2,3112,41,1,5.1
+group,2011-06,APAC,Other products,15103.68,5,3,10055,88,1,17.9
+group,2011-06,APAC,Stationery,2123.54,4,3,1950,17,0,0.0
+group,2011-06,Americas,Accessories & decor,151.78,1,1,388,7,0,0.0
+group,2011-06,Americas,Gifts & seasonal,225.5,1,1,149,6,0,0.0
+group,2011-06,Americas,Home & living,384.03,1,1,147,18,0,0.0
+group,2011-06,Americas,Other products,275.15,1,1,308,19,0,0.0
+group,2011-06,Americas,Stationery,135.0,1,1,100,7,0,0.0
+group,2011-06,Europe,Accessories & decor,6117.5,69,61,3591,196,3,83.9
+group,2011-06,Europe,Gifts & seasonal,18424.03,82,71,13575,551,4,129.39
+group,2011-06,Europe,Home & living,22349.6,91,80,11729,687,9,109.64
+group,2011-06,Europe,Other products,37332.8,110,93,18774,1109,17,403.27
+group,2011-06,Europe,Stationery,3923.63,59,53,3464,145,2,23.4
+group,2011-06,Other,Accessories & decor,4153.72,22,3,2866,77,1,44.55
+group,2011-06,Other,Gifts & seasonal,1877.35,14,2,1447,72,1,247.91
+group,2011-06,Other,Home & living,5276.18,26,4,2718,175,4,402.07
+group,2011-06,Other,Other products,13009.89,31,4,5184,284,7,4049.53
+group,2011-06,Other,Stationery,1164.3,16,3,898,45,1,67.8
+group,2011-06,UK,Accessories & decor,73303.19,910,658,34204,3888,56,1364.08
+group,2011-06,UK,Gifts & seasonal,90057.42,811,569,57581,5614,26,278.9
+group,2011-06,UK,Home & living,179649.43,1112,785,66566,7990,154,5835.51
+group,2011-06,UK,Other products,254192.28,1214,830,120394,12957,230,57470.43
+group,2011-06,UK,Stationery,22308.35,603,430,26356,1939,102,83.4
+group,2011-07,APAC,Accessories & decor,1162.49,8,6,1077,33,1,9.45
+group,2011-07,APAC,Gifts & seasonal,2169.66,8,6,1844,52,1,19.52
+group,2011-07,APAC,Home & living,2126.87,9,6,1203,66,2,52.69
+group,2011-07,APAC,Other products,8307.11,9,6,5927,136,1,109.15
+group,2011-07,APAC,Stationery,432.72,6,5,388,13,1,6.0
+group,2011-07,Americas,Accessories & decor,94.08,1,1,126,6,0,0.0
+group,2011-07,Americas,Gifts & seasonal,103.14,1,1,86,7,0,0.0
+group,2011-07,Americas,Home & living,417.34,1,1,360,25,0,0.0
+group,2011-07,Americas,Other products,1000.48,2,1,309,29,0,0.0
+group,2011-07,Americas,Stationery,153.54,1,1,146,11,0,0.0
+group,2011-07,Europe,Accessories & decor,5162.49,62,56,3919,177,1,4.95
+group,2011-07,Europe,Gifts & seasonal,6606.46,57,52,4875,302,4,68.24
+group,2011-07,Europe,Home & living,9841.62,78,67,5304,518,11,110.45
+group,2011-07,Europe,Other products,32597.8,91,75,15970,1003,12,833.18
+group,2011-07,Europe,Stationery,2158.49,43,38,2316,107,3,143.25
+group,2011-07,Other,Accessories & decor,4717.79,24,5,2755,115,0,0.0
+group,2011-07,Other,Gifts & seasonal,5176.95,18,5,3588,103,0,0.0
+group,2011-07,Other,Home & living,12859.92,27,6,5974,235,4,20.55
+group,2011-07,Other,Other products,20852.65,32,6,9630,435,4,28.65
+group,2011-07,Other,Stationery,1284.75,17,5,1552,70,0,0.0
+group,2011-07,UK,Accessories & decor,75288.85,874,633,38923,4170,38,719.97
+group,2011-07,UK,Gifts & seasonal,104229.87,821,577,68454,6694,44,1394.99
+group,2011-07,UK,Home & living,132126.39,1062,743,63712,8029,102,4609.76
+group,2011-07,UK,Other products,269179.38,1213,811,139533,14248,178,29665.44
+group,2011-07,UK,Stationery,21170.35,577,414,23788,2061,165,124.84
+group,2011-08,APAC,Accessories & decor,1988.48,4,3,633,19,0,0.0
+group,2011-08,APAC,Gifts & seasonal,8933.7,4,3,4882,62,1,1.65
+group,2011-08,APAC,Home & living,7452.32,3,2,4014,84,0,0.0
+group,2011-08,APAC,Other products,11240.9,5,3,6201,140,1,28.14
+group,2011-08,APAC,Stationery,561.56,4,3,604,22,1,20.0
+group,2011-08,Americas,Other products,51.56,1,1,52,5,0,0.0
+group,2011-08,Europe,Accessories & decor,6305.7,67,57,4154,227,7,67.73
+group,2011-08,Europe,Gifts & seasonal,20118.55,77,63,14663,575,8,85.68
+group,2011-08,Europe,Home & living,23804.61,100,80,12208,708,12,140.16
+group,2011-08,Europe,Other products,47461.14,121,92,27654,1331,19,1001.25
+group,2011-08,Europe,Stationery,4287.6,60,55,3685,164,0,0.0
+group,2011-08,Other,Accessories & decor,1067.58,13,2,738,48,2,37.62
+group,2011-08,Other,Gifts & seasonal,4190.45,19,4,2658,118,1,1568.72
+group,2011-08,Other,Home & living,4672.73,20,4,2144,161,4,1378.54
+group,2011-08,Other,Other products,8463.38,20,4,4202,318,9,3210.07
+group,2011-08,Other,Stationery,490.64,12,3,520,30,1,1.33
+group,2011-08,UK,Accessories & decor,70679.8,758,585,35903,3564,38,1214.61
+group,2011-08,UK,Gifts & seasonal,122669.93,746,577,75377,5925,40,1418.24
+group,2011-08,UK,Home & living,143375.67,958,710,71517,7288,91,7045.03
+group,2011-08,UK,Other products,248043.97,1077,778,125647,12165,171,57383.18
+group,2011-08,UK,Stationery,23278.11,496,384,24314,1529,94,1855.92
+group,2011-09,APAC,Accessories & decor,375.55,4,3,91,12,0,0.0
+group,2011-09,APAC,Gifts & seasonal,1008.4,7,6,533,40,0,0.0
+group,2011-09,APAC,Home & living,1396.44,6,5,1220,25,0,0.0
+group,2011-09,APAC,Other products,6426.66,13,8,3027,90,2,2693.55
+group,2011-09,APAC,Stationery,102.48,4,3,72,5,1,35.4
+group,2011-09,Europe,Accessories & decor,9158.13,89,76,5746,263,5,34.38
+group,2011-09,Europe,Gifts & seasonal,15671.68,102,85,11145,535,2,7.55
+group,2011-09,Europe,Home & living,27533.16,119,97,13348,787,16,171.03
+group,2011-09,Europe,Other products,52182.16,138,110,29441,1421,15,443.17
+group,2011-09,Europe,Stationery,4285.64,71,61,3813,169,2,11.65
+group,2011-09,Other,Accessories & decor,6914.24,30,2,3636,163,3,69.65
+group,2011-09,Other,Gifts & seasonal,5119.06,29,2,4217,173,4,163.45
+group,2011-09,Other,Home & living,10715.39,33,2,4507,315,8,118.6
+group,2011-09,Other,Other products,19066.43,38,2,10106,542,6,95.8
+group,2011-09,Other,Stationery,1558.28,21,2,878,54,0,0.0
+group,2011-09,UK,Accessories & decor,110532.11,1051,801,52028,4798,40,1004.44
+group,2011-09,UK,Gifts & seasonal,183192.04,1110,865,123812,9742,60,2128.62
+group,2011-09,UK,Home & living,209261.84,1321,995,93566,10885,129,4085.1
+group,2011-09,UK,Other products,370164.42,1470,1078,184205,17104,225,27692.04
+group,2011-09,UK,Stationery,23926.06,680,531,25429,2138,112,148.12
+group,2011-10,APAC,Accessories & decor,1984.98,10,5,723,28,0,0.0
+group,2011-10,APAC,Gifts & seasonal,1406.3,6,4,1522,26,0,0.0
+group,2011-10,APAC,Home & living,3257.12,7,5,1304,52,0,0.0
+group,2011-10,APAC,Other products,18942.18,10,6,5031,111,2,6079.01
+group,2011-10,APAC,Stationery,1447.86,4,3,1027,15,0,0.0
+group,2011-10,Americas,Accessories & decor,126.2,2,2,80,7,1,95.6
+group,2011-10,Americas,Gifts & seasonal,211.0,2,2,237,19,1,193.66
+group,2011-10,Americas,Home & living,795.1,2,2,542,31,1,416.34
+group,2011-10,Americas,Other products,1045.1,2,2,731,60,1,750.51
+group,2011-10,Americas,Stationery,133.8,2,2,127,8,1,123.4
+group,2011-10,Europe,Accessories & decor,7744.62,93,86,4590,286,7,485.72
+group,2011-10,Europe,Gifts & seasonal,22765.61,119,96,18317,904,2,27.0
+group,2011-10,Europe,Home & living,32305.06,143,113,15396,1041,20,2189.0
+group,2011-10,Europe,Other products,91633.41,177,123,44230,2138,23,11335.37
+group,2011-10,Europe,Stationery,6885.72,90,80,7656,313,3,31.9
+group,2011-10,Other,Accessories & decor,1810.41,20,3,1495,87,3,621.7
+group,2011-10,Other,Gifts & seasonal,4010.6,23,3,3914,178,2,20.4
+group,2011-10,Other,Home & living,8674.87,28,3,3871,245,4,79.1
+group,2011-10,Other,Other products,10308.93,29,3,6133,382,5,265.2
+group,2011-10,Other,Stationery,515.42,15,2,842,36,1,23.9
+group,2011-10,UK,Accessories & decor,104841.64,1154,887,52828,5252,50,1542.09
+group,2011-10,UK,Gifts & seasonal,198873.38,1323,1013,141295,11733,66,9989.49
+group,2011-10,UK,Home & living,226316.73,1463,1100,102198,12300,133,12203.13
+group,2011-10,UK,Other products,380908.99,1654,1182,178571,21280,329,37325.19
+group,2011-10,UK,Stationery,28034.27,706,564,30741,2772,118,476.92
+group,2011-11,APAC,Accessories & decor,731.6,2,2,352,5,0,0.0
+group,2011-11,APAC,Gifts & seasonal,2156.96,5,3,1072,16,2,0.0
+group,2011-11,APAC,Home & living,911.28,2,2,564,8,0,0.0
+group,2011-11,APAC,Other products,11781.66,8,5,6165,41,3,762.83
+group,2011-11,APAC,Stationery,447.4,2,2,196,4,0,0.0
+group,2011-11,Europe,Accessories & decor,7099.25,116,95,3770,275,5,76.15
+group,2011-11,Europe,Gifts & seasonal,19691.46,159,120,16141,881,4,227.43
+group,2011-11,Europe,Home & living,30181.36,172,127,13747,1035,25,507.37
+group,2011-11,Europe,Other products,73843.76,223,152,34702,2229,46,3294.19
+group,2011-11,Europe,Stationery,5601.21,95,71,5508,277,2,6.3
+group,2011-11,Other,Accessories & decor,2331.03,25,2,1298,74,2,36.0
+group,2011-11,Other,Gifts & seasonal,4639.2,39,2,4446,191,3,27.29
+group,2011-11,Other,Home & living,10057.89,39,2,3945,303,10,206.19
+group,2011-11,Other,Other products,13600.35,42,2,6696,508,3,55.9
+group,2011-11,Other,Stationery,1075.71,21,2,913,47,0,0.0
+group,2011-11,UK,Accessories & decor,118982.96,1456,1013,55083,7211,49,1523.36
+group,2011-11,UK,Gifts & seasonal,299402.55,1893,1269,183317,17208,86,3982.51
+group,2011-11,UK,Home & living,324612.83,1990,1329,136095,17515,159,6836.81
+group,2011-11,UK,Other products,533595.11,2281,1442,232328,30794,411,28957.81
+group,2011-11,UK,Stationery,48752.76,1062,758,48169,4747,101,1239.94
+group,2011-12,APAC,Home & living,0.0,0,0,0,0,1,7.65
+group,2011-12,APAC,Other products,0.0,0,0,0,0,1,109.28
+group,2011-12,Americas,Gifts & seasonal,94.76,1,1,88,7,1,94.76
+group,2011-12,Americas,Home & living,303.68,2,2,208,12,1,20.4
+group,2011-12,Americas,Other products,357.8,2,2,152,10,1,154.8
+group,2011-12,Americas,Stationery,129.0,1,1,156,3,0,0.0
+group,2011-12,Europe,Accessories & decor,3039.78,29,28,1991,92,4,57.65
+group,2011-12,Europe,Gifts & seasonal,3642.86,38,36,3510,178,6,38.88
+group,2011-12,Europe,Home & living,7789.04,48,43,3710,279,7,161.0
+group,2011-12,Europe,Other products,21603.53,59,51,10751,531,9,529.47
+group,2011-12,Europe,Stationery,1869.25,23,22,2294,72,4,46.27
+group,2011-12,Other,Accessories & decor,503.42,8,1,182,22,1,15.3
+group,2011-12,Other,Gifts & seasonal,896.85,9,1,669,48,0,0.0
+group,2011-12,Other,Home & living,2468.82,10,1,1462,114,0,0.0
+group,2011-12,Other,Other products,3164.12,9,1,1409,124,1,2.55
+group,2011-12,Other,Stationery,307.68,5,1,400,25,0,0.0
+group,2011-12,UK,Accessories & decor,48090.72,431,360,21845,2436,15,284.68
+group,2011-12,UK,Gifts & seasonal,79230.91,524,428,47838,4669,26,555.52
+group,2011-12,UK,Home & living,110336.8,590,478,49343,5874,63,1738.94
+group,2011-12,UK,Other products,174716.12,688,533,75282,9180,101,32786.27
+group,2011-12,UK,Stationery,180247.54,319,275,92958,1435,23,168521.25

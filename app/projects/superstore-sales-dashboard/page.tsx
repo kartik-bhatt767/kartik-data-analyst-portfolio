@@ -11,41 +11,55 @@ export default function SuperstoreSalesDashboardPage() {
       <section className="project-hero">
         <div className="project-kicker">Case study · 01 / Business intelligence</div>
         <h1>Retail sales, <em>without the fog.</em></h1>
-        <p className="project-lede">A beginner-friendly analysis that turns a retail order table into a clear view of revenue, profit, regional performance, and discount risk.</p>
+        <p className="project-lede">An end-to-end retail analysis that turns 541,909 public transaction lines into a clear view of revenue, demand, product mix, and cancellation risk.</p>
         <div className="project-meta-grid">
           <div><span>Role</span><strong>Data analyst</strong></div>
-          <div><span>Tools</span><strong>Python · SQL · Power BI</strong></div>
-          <div><span>Dataset</span><strong>36 practice orders</strong></div>
-          <div><span>Focus</span><strong>Sales and margin</strong></div>
+          <div><span>Tools</span><strong>Python · SQL · Next.js</strong></div>
+          <div><span>Dataset</span><strong>UCI Online Retail</strong></div>
+          <div><span>Focus</span><strong>Revenue and retention</strong></div>
         </div>
       </section>
 
+      <p className="project-source-note">Public source: <a href="https://archive.ics.uci.edu/dataset/352/online%2Bretail" target="_blank" rel="noreferrer">UCI Online Retail ↗</a> · Revenue is reported in GBP · Product groups are documented feature engineering.</p>
+
       <section className="project-kpis" aria-label="Project KPIs">
-        <div><span>Total sales</span><strong>$53,980</strong></div>
-        <div><span>Total profit</span><strong>$6,619</strong></div>
-        <div><span>Profit margin</span><strong>12.3%</strong></div>
-        <div><span>Loss-making orders</span><strong>4 / 36</strong></div>
+        <div><span>Valid revenue</span><strong>£10.67M</strong></div>
+        <div><span>Valid orders</span><strong>19,960</strong></div>
+        <div><span>Known customers</span><strong>4,338</strong></div>
+        <div><span>Cancellation lines</span><strong>9,288</strong></div>
       </section>
 
       <InteractiveDashboard />
 
+      <section className="project-method" aria-labelledby="method-title">
+        <div>
+          <div className="project-section-label">Method</div>
+          <h2 id="method-title">Trust the number before the story.</h2>
+        </div>
+        <div className="method-grid">
+          <article><span>01 · Data quality</span><h3>Separate valid sales from cancellations.</h3><p>Invoices beginning with C, non-positive quantities, and non-positive prices are not counted as valid revenue.</p></article>
+          <article><span>02 · Feature engineering</span><h3>Make assumptions visible.</h3><p>Markets come from country rules, while product groups come from documented description keywords—not hidden categories.</p></article>
+          <article><span>03 · Limitation</span><h3>Do not invent profit.</h3><p>The source has no cost field, so this case study reports revenue, orders, units, and cancellation rate instead.</p></article>
+        </div>
+      </section>
+
       <section className="project-content-grid">
         <div>
           <div className="project-section-label">The question</div>
-          <h2>Where should the business grow, and where should it protect margin?</h2>
+          <h2>Where is demand coming from, and where is revenue leaking?</h2>
         </div>
         <div className="project-copy">
-          <p>The dashboard is designed for a manager who needs the story quickly: which category drives sales, which region needs attention, and whether discounts are creating growth or simply reducing profit.</p>
-          <p>The workflow starts with a clean order table, creates reusable KPI queries, and finishes with a dashboard layout that supports a decision instead of showing charts for their own sake.</p>
+          <p>The dashboard is designed for a manager who needs the story quickly: which market and product group drive revenue, which month is strongest, and whether cancellations are eroding the demand signal.</p>
+          <p>The workflow starts with a public transaction workbook, removes invalid sales lines, identifies cancellations, engineers transparent market and product-group dimensions, and finishes with an interactive decision view.</p>
         </div>
       </section>
 
       <section className="project-recommendation">
         <div className="project-section-label">What I would do next</div>
         <div className="recommendation-grid">
-          <article><span>01</span><h3>Review high discounts</h3><p>Four orders lose money. Check promotion rules before pushing more volume through the same offers.</p></article>
-          <article><span>02</span><h3>Protect the South region</h3><p>South leads sales but has the weakest margin, so growth alone is not the right success metric.</p></article>
-          <article><span>03</span><h3>Use more history</h3><p>Add a larger, multi-year dataset to test seasonality and make future recommendations more reliable.</p></article>
+          <article><span>01</span><h3>Investigate cancellations</h3><p>Separate gross demand from retained revenue, then review the highest-cancellation market and product groups.</p></article>
+          <article><span>02</span><h3>Use the UK as a baseline</h3><p>The UK contributes most revenue, so Europe, APAC, and the Americas should be evaluated as expansion hypotheses.</p></article>
+          <article><span>03</span><h3>Add cost data next</h3><p>The source has no cost field. Add cost, shipping, and customer segments before making profit or lifetime-value claims.</p></article>
         </div>
       </section>
 
