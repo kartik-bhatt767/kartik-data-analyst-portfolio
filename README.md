@@ -1,51 +1,41 @@
-# Kartik Bhatt — Data Analyst Portfolio
+# Kartik Bhatt | Data Analyst Portfolio
 
-Portfolio website and analytics projects by Kartik Bhatt, a third-year B.Tech CSE (AI/ML) student based in Lucknow, India.
+Third-year B.Tech Computer Science Engineering (AI/ML) student based in Lucknow, India. I build practical analytics projects that connect messy data to clear business decisions.
 
-## Featured project
+[View the live portfolio](https://kartik-data-analyst-portfolio.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/kartik-bhatt-33bbb02b7/) · [Kaggle](https://www.kaggle.com/kartikbhatt5533)
 
-### Online Retail Revenue & Returns Analysis
+## What this repository demonstrates
 
-An end-to-end retail analytics case study that answers:
+- Data cleaning, quality checks, and exploratory analysis with Python and pandas
+- SQL KPI design, segmentation, and business-question-driven analysis
+- Classification, model evaluation, forecasting baselines, and sensitivity analysis
+- Interactive dashboard storytelling for business and operations audiences
+- Reproducible analysis scripts, documented assumptions, limitations, and recommendations
 
-> Where is demand coming from, and where is revenue leaking through cancellations?
+## Case studies
 
-The project includes:
+| Project | Business question | Methods and evidence |
+| --- | --- | --- |
+| [Online Retail Revenue & Returns](./projects/superstore-sales-dashboard) | Where is demand coming from, and where is revenue leaking through cancellations? | UCI Online Retail data, Python, SQL, data-quality workflow, market/product analysis |
+| [Customer Churn Analysis](./projects/customer-churn-analysis) | Which customers should a retention team prioritize, and why? | IBM Telco sample, cohort segmentation, logistic-regression baseline, churn scores, retention queue |
+| [Bike Sharing Capacity Planning](./projects/bike-sharing-operations) | When will demand exceed available capacity, and what action should operations take? | Hourly demand, model comparison, holdout MAPE, anomaly detection, capacity stress testing |
 
-- Python ingestion and data-quality workflow for the public UCI Online Retail dataset
-- SQL queries for revenue, order, and cancellation KPIs
-- An interactive dashboard with market and product-group filters
-- Business recommendations and limitations
-- An interview guide explaining the decisions behind the work
-
-Open the project files in [`projects/superstore-sales-dashboard`](./projects/superstore-sales-dashboard).
-
-### Customer Churn Analysis
-
-An intermediate retention case study using the public IBM Telco Customer Churn sample. It combines cohort segmentation, churned monthly-charge exposure, and a held-out logistic-regression baseline for customer prioritization.
-
-The source contains 7,043 customers but no location or true usage-volume field. The project keeps that limitation visible and uses service depth only as a documented proxy.
-
-Open the project files in [`projects/customer-churn-analysis`](./projects/customer-churn-analysis).
-
-The earlier bank-marketing model remains available as an additional modeling exercise in [`projects/bank-marketing-campaign`](./projects/bank-marketing-campaign).
-
-### Bike Sharing Operations Analysis
-
-An operations case study using hourly demand, season, weather, and day-type signals to explore capacity-planning decisions.
-
-Open the project files in [`projects/bike-sharing-operations`](./projects/bike-sharing-operations).
+Each project includes its own README, analysis script, SQL queries, generated outputs, and interview guide where applicable.
 
 ## Run the portfolio locally
+
+Requirements: Node.js 18+ and Python 3.10+.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Run the analysis
+## Run an analysis
+
+Each case study can be regenerated independently:
 
 ```bash
 cd projects/superstore-sales-dashboard
@@ -53,14 +43,18 @@ python analysis.py
 
 cd ../customer-churn-analysis
 python analysis.py
+
+cd ../bike-sharing-operations
+python analysis.py
 ```
 
-Each analysis writes a findings report and regenerates its dashboard data.
+The scripts validate the input data and write findings, metrics, and dashboard-ready outputs into each project's `outputs` folder.
 
-## About
+## About me
 
-I am building my foundation in SQL, Python, Excel, Power BI, statistics, and business intelligence through a B.Tech in Computer Science Engineering with AI/ML.
+I am strengthening my foundation in SQL, Python, statistics, Excel, Power BI, and business intelligence through my B.Tech CSE (AI/ML) degree. I am interested in entry-level data analyst and business intelligence opportunities where I can turn analysis into measurable action.
 
+- Location: Lucknow, India
 - [LinkedIn](https://www.linkedin.com/in/kartik-bhatt-33bbb02b7/)
 - [GitHub](https://github.com/kartik-bhatt767)
 - [Kaggle](https://www.kaggle.com/kartikbhatt5533)
