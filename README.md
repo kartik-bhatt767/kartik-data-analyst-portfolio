@@ -14,6 +14,8 @@ Use the live site for the fastest review, then open the matching project folder 
 
 The strongest interview themes are transparent assumptions, reproducible analysis, model evaluation, and recommendations that connect directly to a business decision.
 
+For a concise explanation of the work and common interview questions, see the [interview guide](./INTERVIEW-GUIDE.md).
+
 ## Featured project
 
 ### Online Retail Revenue & Returns Analysis
@@ -47,19 +49,6 @@ The earlier bank-marketing model remains available as an additional modeling exe
 An operations case study using hourly demand, season, weather, and day-type signals to explore capacity-planning decisions.
 
 Open the project files in [`projects/bike-sharing-operations`](./projects/bike-sharing-operations).
-
-## Visual preview
-
-<table>
-  <tr>
-    <td><img src="./public/portfolio-home.png" alt="Portfolio homepage" width="430"></td>
-    <td><img src="./public/retail-analysis.png" alt="Retail analysis project" width="430"></td>
-  </tr>
-  <tr>
-    <td><img src="./public/customer-churn.png" alt="Customer churn project" width="430"></td>
-    <td><img src="./public/bike-sharing.png" alt="Bike sharing capacity planning project" width="430"></td>
-  </tr>
-</table>
 
 ## Run the portfolio locally
 
